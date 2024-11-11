@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dashboard</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QFrame" name="sidebar">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="styleSheet">
+       <string>
+        QFrame {
+            background-color: #34495E;
+            color: white;
+            border-right: 2px solid #BDC3C7;
+        }
+        QPushButton {
+            background-color: transparent;
+            border: none;
+            color: #ECF0F1;
+            padding: 15px;
+            text-align: left;
+            font-size: 16px;
+        }
+        QPushButton:hover {
+            background-color: #1ABC9C;
+            border-radius: 5px;
+        }
+       </string>
+      </property>
+      <layout class="QVBoxLayout" name="sidebarLayout">
+       <item>
+        <widget class="QPushButton" name="homeButton">
+         <property name="text">
+          <string>🏠 Home</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="settingsButton">
+         <property name="text">
+          <string>⚙️ Settings</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="logoutButton">
+         <property name="text">
+          <string>🔓 Logout</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="contentArea">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="styleSheet">
+       <string>
+        QFrame {
+            background-color: #ECF0F1;
+        }
+        QLabel {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px;
+            color: #34495E;
+        }
+        QTableWidget {
+            background-color: #FFFFFF;
+            border: 1px solid #BDC3C7;
+            font-size: 14px;
+        }
+        QHeaderView::section {
+            background-color: #34495E;
+            color: white;
+            padding: 5px;
+            border: 1px solid #BDC3C7;
+        }
+       </string>
+      </property>
+      <layout class="QVBoxLayout" name="contentLayout">
+       <item>
+        <widget class="QLabel" name="titleLabel">
+         <property name="text">
+          <string>Dashboard</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="dataTable"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
